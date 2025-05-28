@@ -1,0 +1,396 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ededed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, p {
+  font-family: inherit;
+}
+
+/* Input */
+input[type="text"] {
+  font-size: larger;
+  height: 3.25rem;
+  width: 100%;
+  padding: 0 10rem 0 3.85rem;
+  border: 0.5px solid #adadad;
+  border-radius: 5rem;
+  background-color: #000;
+  transition: 0.2s;
+}
+
+input[type="text"]:hover {
+  border: 1.45px solid #fff;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Layout Containers */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin: auto;
+  padding: 1rem 4rem;
+  background-color: #000;
+  border-bottom: 1px solid #ededed;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.item-1,
+.item-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-2 {
+  margin-right: auto;
+  padding-left: 4rem;
+  color: #fff;
+}
+
+.item-3 {
+  position: relative;
+  display: inline-block;
+}
+
+.item-3 svg {
+  position: absolute;
+  height: 1.25rem;
+  top: 1.45vh;
+  left: 2vh;
+}
+
+.item-4 svg {
+  padding: 8px;
+  border-radius: 50%;
+  fill: none;
+  stroke: #fff;
+  transition: 0.35s;
+}
+
+.item-4 svg:hover {
+  background-color: #fff;
+  cursor: pointer;
+  stroke: #000;
+}
+
+/* Info Card */
+.info_card {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.info_card #avi {
+  height: 3rem;
+  border: 0.25rem solid #dadaff;
+  border-radius: 8rem;
+}
+
+.info_name {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+#expand-down-arrow {
+  stroke: #fff;
+}
+
+/* Search Icon */
+.search-icon .st0,
+.search-icon .st1 {
+  stroke: #ededed;
+  stroke-width: 2px;
+  transition: stroke 0.3s ease;
+}
+
+.item-3:has(input:focus) .search-icon .st0,
+.item-3:has(input:focus) .search-icon .st1 {
+  stroke: #000;
+  fill: none;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  line-height: 1.85;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-image: linear-gradient(45deg, #2626ff, #6d6dff);
+  color: #fff;
+}
+
+#dash_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.35rem;
+  padding: 2rem;
+}
+
+/* CTA Button */
+button.card-cta {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 6rem;
+  margin: 1rem 0 1rem auto;
+  padding: 12px 18px;
+}
+
+.card-cta svg {
+  fill: #000;
+  height: 1rem;
+}
+
+.card:hover .card-cta {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card:hover .card-cta svg {
+  fill: #fff;
+}
+
+/* Design Team Section */
+.design-team h1 {
+  text-align: center;
+  font-size: xx-large;
+  padding: 2rem;
+}
+
+.fyq1-graph,
+.fyq2-graph {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.bar {
+  fill: #4f46e5;
+}
+
+.label {
+  font: bold 12px sans-serif;
+}
+
+.axis {
+  stroke: #ccc;
+}
+.graph-stat-1{
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 8rem;
+}
+.graph-stat-2{
+    margin: 0 8rem 0 0;
+}
+.graph-stat-1 h1, .graph-stat-2 h1{
+    text-align: left;
+}
+
+/* Team Cards */
+#team_cards {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 100%;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #111827;
+}
+
+section.design-team {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Individual Team Card */
+.teamCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+  padding: 2rem 6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #212c3c;
+}
+
+.teamCard img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #ededed;
+}
+
+.teamCard h1 {
+  flex: 1;
+  padding: 1rem 0;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.15rem;
+  color: #FFF;
+}
+
+.teamCard p {
+    flex: 1;
+  color: #000;
+  font-size: 12px;
+  text-align: center;
+  background-color: #eeeeff;
+  padding: 0.5rem;
+  border-radius: 4rem;
+}
+
+/* Rating Stars */
+.stars {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  color: gold;
+}
+
+/* Footer */
+.dexd-footer {
+  background-color: #111827;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+.dexd-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dexd-footer-brand h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.dexd-footer-brand p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.dexd-footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dexd-footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.dexd-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.dexd-footer-bottom {
+  border-top: 1px solid #374151;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.dexd-footer-bottom p {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
+  .container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  input[type="text"] {
+    padding-left: 3rem;
+  }
+
+  .item-4 {
+    display: none;
+  }
+
+  .item-3 svg {
+    left: 1rem;
+    top: 1.05rem;
+  }
+
+  .info_card {
+    display: none;
+  }
+
+  section.design-team {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card, .teamCard {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 2rem 6rem;
+  }
+}
